@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en" data-sb="expanded">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: blob:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+<meta name="description" content="BrandGuard AI — evidence-linked pre-publication brand governance and content assurance.">
+<meta name="theme-color" content="#172554">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/inter-Regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/brandguard-ui.css">
+<title>BrandGuard AI | Pre-publication governance</title>
+<script>try{var s=localStorage.getItem('brandguard_sidebar_v1');if(s==='collapsed')document.documentElement.setAttribute('data-sb','collapsed')}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-review" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"></path><path d="M17 3h2a2 2 0 0 1 2 2v2"></path><path d="M21 17v2a2 2 0 0 1-2 2h-2"></path><path d="M7 21H5a2 2 0 0 1-2-2v-2"></path><circle cx="12" cy="12" r="3"></circle><path d="m16 16-1.9-1.9"></path></symbol>
+<symbol id="i-vault" viewBox="0 0 24 24"><path d="m16 6 4 14"></path><path d="M12 6v14"></path><path d="M8 8v12"></path><path d="M4 4v16"></path></symbol>
+<symbol id="i-approvals" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></symbol>
+<symbol id="i-insights" viewBox="0 0 24 24"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></symbol>
+<symbol id="i-audit" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l4 2"></path></symbol>
+<symbol id="i-team" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></symbol>
+<symbol id="i-settings" viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M12 5v14"></path></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"></path></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></symbol>
+<symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></symbol>
+<symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></symbol>
+<symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></symbol>
+<symbol id="i-panel" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="m16 15-3-3 3-3"></path></symbol>
+<symbol id="i-panel-open" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="m14 9 3 3-3 3"></path></symbol>
+<symbol id="i-pencil" viewBox="0 0 24 24"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"></path><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path><line x1="10" x2="10" y1="11" y2="17"></line><line x1="14" x2="14" y1="11" y2="17"></line></symbol>
+<symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></symbol>
+<symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></symbol>
+<symbol id="i-ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></symbol>
+<symbol id="i-err" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"></path><path d="M8 16H3v5"></path></symbol>
+<symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" x2="9" y1="12" y2="12"></line></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></symbol>
+<symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></symbol>
+<symbol id="i-drive" viewBox="0 0 24 24"><line x1="22" x2="2" y1="12" y2="12"></line><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path><line x1="6" x2="6.01" y1="16" y2="16"></line><line x1="10" x2="10.01" y1="16" y2="16"></line></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></symbol>
+<symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"></path><circle cx="12" cy="12" r="3"></circle></symbol>
+<symbol id="i-message" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></symbol>
+<symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 6h18"></path><path d="M7 12h10"></path><path d="M10 18h4"></path></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></symbol>
+<symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></symbol>
+<symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></symbol>
+<symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></symbol>
+<symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></symbol>
+<symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></symbol>
+<symbol id="i-user-plus" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="19" x2="19" y1="8" y2="14"></line><line x1="22" x2="16" y1="11" y2="11"></line></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></symbol>
+<symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" x2="4" y1="22" y2="15"></line></symbol>
+<symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></symbol>
+<symbol id="i-edit-file" viewBox="0 0 24 24"><path d="M12.5 22H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v9.5"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M13.378 15.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z"></path></symbol>
+<symbol id="i-plus-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></symbol>
+<symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"></path><path d="M3.34 19a10 10 0 1 1 17.32 0"></path></symbol>
+<symbol id="i-list" viewBox="0 0 24 24"><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path><path d="M13 6h8"></path><path d="M13 12h8"></path><path d="M13 18h8"></path></symbol>
+<symbol id="i-external" viewBox="0 0 24 24"><path d="M15 3h6v6"></path><path d="M10 14 21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></symbol>
+<symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"></rect><rect width="20" height="8" x="2" y="14" rx="2" ry="2"></rect><line x1="6" x2="6.01" y1="6" y2="6"></line><line x1="6" x2="6.01" y1="18" y2="18"></line></symbol>
+<symbol id="i-key" viewBox="0 0 24 24"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"></path><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle></symbol>
+<symbol id="i-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></symbol>
+<symbol id="i-save" viewBox="0 0 24 24"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"></path><path d="M7 3v4a1 1 0 0 0 1 1h7"></path></symbol>
+</defs></svg>
+
+<div class="app">
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar" aria-label="Primary">
+    <div class="sb-head">
+      <div class="brand">
+        <div class="brand-mark"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></div>
+        <div class="brand-text"><div class="brand-name">BrandGuard AI</div><div class="brand-sub">Content governance</div></div>
+      </div>
+      <button class="sb-toggle" id="sidebarToggle" aria-label="Collapse sidebar" title="Collapse sidebar"><svg class="i" aria-hidden="true"><use href="#i-panel"/></svg></button>
+    </div>
+    <div class="sb-scroll">
+      <div class="nav-label">Workspace</div>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="active" data-page="review" data-tip="Review Content"><svg class="i" aria-hidden="true"><use href="#i-review"/></svg><span class="nav-text">Review Content</span></button>
+        <button data-page="vault" data-tip="Knowledge Vault"><svg class="i" aria-hidden="true"><use href="#i-vault"/></svg><span class="nav-text">Knowledge Vault</span></button>
+        <button data-page="approvals" data-tip="Approval Queue"><svg class="i" aria-hidden="true"><use href="#i-approvals"/></svg><span class="nav-text">Approval Queue</span><span id="approvalNavCount" class="nav-badge hidden">0</span></button>
+        <button data-page="insights" data-tip="Governance Insights"><svg class="i" aria-hidden="true"><use href="#i-insights"/></svg><span class="nav-text">Governance Insights</span></button>
+        <button data-page="activity" data-tip="Audit Trail"><svg class="i" aria-hidden="true"><use href="#i-audit"/></svg><span class="nav-text">Audit Trail</span></button>
+        <button data-page="team" data-tip="Team Workspace"><svg class="i" aria-hidden="true"><use href="#i-team"/></svg><span class="nav-text">Team Workspace</span></button>
+        <button data-page="settings" data-tip="Settings"><svg class="i" aria-hidden="true"><use href="#i-settings"/></svg><span class="nav-text">Settings</span></button>
+      </nav>
+    </div>
+    <div class="sb-foot">
+      <button class="sb-expand" id="sidebarExpand" aria-label="Expand sidebar" title="Expand sidebar"><svg class="i" aria-hidden="true"><use href="#i-panel-open"/></svg></button>
+      <div class="ws-card" id="wsCard">
+        <div class="ws-avatar" id="wsAvatar">BG</div>
+        <div class="ws-info">
+          <div class="ws-name" id="wsName">Local demo workspace</div>
+          <div class="ws-meta"><span class="dot local" id="wsDot"></span><span id="wsMeta">Browser-local data</span></div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sb-backdrop" id="sbBackdrop"></div>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+    <header class="topbar">
+      <div class="top-left">
+        <button class="btn ghost icon menu-btn" id="menuBtn" aria-label="Open navigation"><svg class="i lg" aria-hidden="true"><use href="#i-menu"/></svg></button>
+        <div class="crumb">Workspace<span class="sep">/</span><strong id="crumbName">Review Content</strong></div>
+      </div>
+      <div class="top-actions">
+        <span class="chip local" id="modeChip" title="This Vercel Drop build runs its evidence-linked review engine locally"><span class="dot"></span><span class="chip-text" id="modeChipText">Local demo</span></span>
+        <span class="chip" id="analysisModePill">Evidence review mode</span>
+        <button class="btn ghost icon small tip-left" id="helpBtn" title="Open workflow guide" aria-label="Open workflow guide" data-tip="Workflow guide"><svg class="i lg" aria-hidden="true"><use href="#i-help"/></svg></button>
+        <div class="avatar" id="topAvatar" title="Workspace owner">BG</div>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- ================= REVIEW ================= -->
+      <section class="page active" id="page-review">
+        <div class="page-head">
+          <div>
+            <h1>Review Content</h1>
+            <p>Check a post, advertisement, email or document against your organisation’s approved brand knowledge before it goes live.</p>
+          </div>
+          <div class="head-actions"><button class="btn primary" id="newReviewBtn"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg> New review</button></div>
+        </div>
+
+        <div class="kpis hidden" id="reviewStats"></div>
+
+        <div class="review-layout">
+          <div class="card" id="submitCard">
+            <div class="card-head"><div><h2>Content submission</h2><p>Enter the item you want to publish.</p></div><span class="badge blue">Step 1 · Submit</span></div>
+            <div class="card-body">
+              <div class="form-row">
+                <div class="field"><label for="contentTitle">Content name</label><input id="contentTitle" value="Spring product campaign" placeholder="e.g. Product launch email" autocomplete="off" /></div>
+                <div class="field"><label for="contentType">Content type</label><select id="contentType"><option>Social media post</option><option>Advertisement</option><option>Email</option><option>Document</option><option>Press release</option><option>Product page</option></select></div>
+              </div>
+              <div class="field">
+                <label for="contentInput">Content to review</label>
+                <textarea id="contentInput" maxlength="14000" placeholder="Paste your draft here…" aria-describedby="contentHint"></textarea>
+                <div class="helper" id="contentHint">The review checks claims, facts, tone, terminology and readability against the active policy pack.</div>
+              </div>
+              <div class="editor-meta">
+                <div class="example-links"><span>Try an example:</span><button class="btn small" id="loadRisky" type="button">Risky draft</button><button class="btn small" id="loadClean" type="button">Clean draft</button></div>
+                <span class="counter" id="charCount">0 characters</span>
+              </div>
+              <div class="upload-box">
+                <div class="u-ico"><svg class="i lg" aria-hidden="true"><use href="#i-image"/></svg></div>
+                <div class="u-copy"><strong>Visual brand asset <span class="muted" style="font-weight:400">(optional)</span></strong><small>PNG, JPG or WebP up to 5 MB, for a local asset and palette check.</small><img id="imagePreview" class="preview-img" alt="Uploaded visual preview" /></div>
+                <input type="file" id="visualFile" accept="image/*" aria-label="Upload image for visual check" />
+              </div>
+              <div class="helper">The current visual check samples brand colours and checks the asset register. It does not claim to recognise logos or verify image rights.</div>
+            </div>
+            <div class="card-foot">
+              <span class="helper" style="margin:0;max-width:430px">Evidence retrieval and specialist checks run on the approved knowledge supplied to this workspace.</span>
+              <button class="btn primary" id="runReviewBtn">Run BrandGuard Review <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+          </div>
+
+          <aside class="side-stack">
+            <div class="card">
+              <div class="card-head"><div><h2>Active policy pack</h2><p>BrandGuard Core v1.0</p></div><span class="badge ok"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg> Active</span></div>
+              <div class="card-body">
+                <div class="policy-list" id="policyPack"></div>
+                <div class="policy-sub">Checks in this review</div>
+                <div id="policyChecks"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-head"><div><h2>Analysis workflow</h2><p>One source of truth. Explainable checks. Human approval.</p></div></div>
+              <div class="card-body"><ol class="stepper" id="analysisPipeline"></ol></div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="card results" id="resultsCard">
+          <div class="card-head"><div><h2>Review results</h2><p>Rule-by-rule findings and recommended actions.</p></div><span class="badge gray" id="resultState">Awaiting content</span></div>
+          <div id="resultsSkeleton" class="skeleton-wrap hidden" aria-busy="true" aria-label="Analysing content"><div class="sk h1"></div><div class="sk h2"></div><div class="sk h3"></div><div class="sk h3"></div></div>
+          <div id="emptyResults" class="results-empty"><div class="empty-icon"><svg class="i lg" aria-hidden="true"><use href="#i-review"/></svg></div><strong>Your review will appear here</strong><p>Load an example or paste your own content, then run the review to see risk, evidence and suggested fixes.</p></div>
+          <div id="reviewResults" class="hidden">
+            <div class="results-top">
+              <div class="panel risk-panel" id="riskPanel">
+                <div class="gauge-wrap" id="scoreRing"></div>
+                <div class="risk-copy">
+                  <span class="eyebrow-s">Governance score</span>
+                  <strong id="riskLabel">Risk score</strong>
+                  <p id="riskSummary">Analysis complete</p>
+                  <span class="badge err" id="overallStatus">Review required</span>
+                  <div class="sev-counts" id="sevCounts"></div>
+                </div>
+              </div>
+              <div class="panel" id="governancePanel"></div>
+            </div>
+            <div class="section"><div class="section-head"><h3>Specialist checks <span class="badge gray">6</span></h3></div><div id="agentPanel" class="agent-grid"></div></div>
+            <div class="section"><div class="section-head"><h3>Findings <span class="badge gray" id="findingCount">0</span></h3></div><div id="findingList" class="finding-list"></div></div>
+            <div class="section"><div id="retrievalPanel" class="panel"></div></div>
+            <div id="visualResult" class="visual-result hidden"></div>
+            <div class="result-footer">
+              <span id="reviewStatusText" class="review-status">Human reviewer required before publication.</span>
+              <div class="btn-row"><button class="btn" id="saveDraftBtn">Save draft</button><button class="btn primary" id="sendReviewBtn">Send for human review</button></div>
+            </div>
+          </div>
+        </div>
+        <p class="footer-note">BrandGuard AI · Evidence-linked pre-publication governance. Review content is checked against retrieved approved knowledge, specialist policy modules and a human approval workflow.</p>
+      </section>
+
+      <!-- ================= VAULT ================= -->
+      <section class="page" id="page-vault">
+        <div class="page-head">
+          <div><h1>Knowledge Vault</h1><p>Manage the approved facts, brand rules, claims and terminology used to review content. Findings reference these records so reviewers can trace why content was flagged.</p></div>
+          <div class="head-actions"><button class="btn primary" id="addKnowledgeBtn"><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg> Add Knowledge Entry</button></div>
+        </div>
+        <div class="card flush">
+          <div class="toolbar">
+            <div class="search"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><input id="vaultSearch" type="search" placeholder="Search title, rule text or source…" aria-label="Search knowledge vault" autocomplete="off" /></div>
+            <div class="chips" id="vaultCategories" role="group" aria-label="Filter by category"></div>
+            <span class="result-count grow" style="text-align:right" id="vaultCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table class="stack" id="vaultTable">
+              <thead><tr><th>Entry</th><th>Category</th><th>Source reference</th><th class="nowrap">Version</th><th class="nowrap">Status</th><th class="right">Actions</th></tr></thead>
+              <tbody id="vaultRows"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="knowledgeGrid" class="hidden"></div>
+        <p class="footer-note">Active policy pack · BrandGuard Core v1.0. In demo mode, knowledge is stored in this browser. Connect a Supabase workspace in Team Workspace to share approved knowledge across your team with role-based access policies.</p>
+      </section>
+
+      <!-- ================= APPROVALS ================= -->
+      <section class="page" id="page-approvals">
+        <div class="page-head">
+          <div><h1>Approval Queue</h1><p>AI findings inform the decision. A human reviewer decides whether content can move forward.</p></div>
+          <div class="head-actions"><span class="badge warn" id="queueSummary">0 pending decisions</span></div>
+        </div>
+        <div class="kpis" id="approvalStats"></div>
+        <div class="card flush" id="approvalQueue">
+          <div class="toolbar">
+            <div class="chips" id="approvalFilter" role="group" aria-label="Filter by status"></div>
+            <span class="result-count grow" style="text-align:right" id="approvalCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table class="stack" id="approvalTable">
+              <thead><tr><th>Content</th><th>Risk level</th><th class="nowrap">Submitted</th><th>Status</th><th>Reviewer</th><th class="right">Actions</th></tr></thead>
+              <tbody id="approvalRows"></tbody>
+            </table>
+          </div>
+        </div>
+        <div class="notice plain" style="margin-top:16px"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><span>An item is not marked approved just because automated checks finish. A human decision is required.</span></div>
+      </section>
+
+      <!-- ================= INSIGHTS ================= -->
+      <section class="page" id="page-insights">
+        <div class="page-head">
+          <div><h1>Governance Insights</h1><p>Use recurring findings to improve approved knowledge, guidance and team training.</p></div>
+          <div class="head-actions"><span class="badge blue">Live from this workspace’s review history</span></div>
+        </div>
+        <div class="kpis" id="insightStats"></div>
+        <div class="chart-grid">
+          <div class="card chart-card"><div class="card-head"><div><h2>Review activity</h2><p>Reviews run per day, last 14 days.</p></div></div><div class="card-body" id="chartActivity"></div></div>
+          <div class="card chart-card"><div class="card-head"><div><h2>Risk distribution</h2><p>Reviewed items by overall risk level.</p></div></div><div class="card-body" id="chartRisk"></div></div>
+        </div>
+        <div class="chart-grid three">
+          <div class="card chart-card"><div class="card-head"><div><h2>Common policy violations</h2><p>Most frequently triggered rules.</p></div></div><div class="card-body" id="chartRules"></div></div>
+          <div class="card chart-card"><div class="card-head"><div><h2>Issue categories</h2><p>Share of findings by category.</p></div></div><div class="card-body" id="issueBars"></div></div>
+          <div class="card chart-card"><div class="card-head"><div><h2>Approval statistics</h2><p>Human decisions on submitted items.</p></div></div><div class="card-body" id="chartApprovals"></div></div>
+        </div>
+        <div class="chart-grid">
+          <div class="card chart-card"><div class="card-head"><div><h2>Frequently detected issues</h2><p>Most common finding types.</p></div></div><div class="card-body" id="chartIssues"></div></div>
+          <div class="card chart-card"><div class="card-head"><div><h2>Governance recommendations</h2><p>Actions based on detected patterns.</p></div></div><div class="card-body" id="governanceRecommendation"></div></div>
+        </div>
+      </section>
+
+      <!-- ================= AUDIT ================= -->
+      <section class="page" id="page-activity">
+        <div class="page-head">
+          <div><h1>Audit Trail</h1><p>A chronological record of review, correction and human approval events.</p></div>
+          <div class="head-actions"><button class="btn" id="exportActivityCsvBtn"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg> Export CSV</button><button class="btn" id="exportActivityBtn"><svg class="i" aria-hidden="true"><use href="#i-download"/></svg> Export JSON</button></div>
+        </div>
+        <div class="card flush">
+          <div class="toolbar">
+            <div class="search"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg><input id="auditSearch" type="search" placeholder="Search events, content or details…" aria-label="Search audit trail" autocomplete="off" /></div>
+            <select class="select-sm" id="auditType" aria-label="Filter by event type"><option value="">All event types</option></select>
+            <span class="result-count grow" style="text-align:right" id="auditCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table class="stack">
+              <thead><tr><th>Event</th><th>Content reference</th><th>Description</th><th class="nowrap">Timestamp</th></tr></thead>
+              <tbody id="activityRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SETTINGS ================= -->
+      <section class="page" id="page-settings">
+        <div class="page-head">
+          <div><h1>Settings</h1><p>Configure review rules, evidence requirements and whether content may be sent to a hosted AI provider.</p></div>
+          <div class="head-actions"><button class="btn primary" id="saveSettingsBtn"><svg class="i" aria-hidden="true"><use href="#i-save"/></svg> Save settings</button></div>
+        </div>
+        <div class="settings-layout">
+          <nav class="settings-nav" id="settingsNav" aria-label="Settings sections">
+            <a href="#set-governance" class="active"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg> Governance Rules</a>
+            <a href="#set-analysis"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg> Analysis</a>
+            <a href="#set-data"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg> Data &amp; Privacy</a>
+            <a href="#set-ai"><svg class="i" aria-hidden="true"><use href="#i-cpu"/></svg> AI Configuration</a>
+            <a href="#set-workspace"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg> Workspace</a>
+            <a href="#set-status"><svg class="i" aria-hidden="true"><use href="#i-activity"/></svg> System Status</a>
+          </nav>
+          <div class="settings-stack">
+
+            <div class="card" id="set-governance">
+              <div class="card-head"><div class="card-title"><span class="card-ico"><svg class="i" aria-hidden="true"><use href="#i-shield"/></svg></span><div><h2>Governance Rules</h2><p>Choose how the review workflow behaves.</p></div></div></div>
+              <div class="card-body">
+                <div class="setting"><div><strong>Require human approval for high-risk content</strong><small>Do not mark high-risk content as ready to publish.</small></div><input class="switch" type="checkbox" id="settingHuman" checked aria-label="Require human approval for high-risk content" /></div>
+                <div class="setting"><div><strong>Require evidence for claim findings</strong><small>Show the approved source or explain that no source was found.</small></div><input class="switch" type="checkbox" id="settingEvidence" checked aria-label="Require evidence for claim findings" /></div>
+              </div>
+            </div>
+
+            <div class="card" id="set-analysis">
+              <div class="card-head"><div class="card-title"><span class="card-ico"><svg class="i" aria-hidden="true"><use href="#i-gauge"/></svg></span><div><h2>Analysis Configuration</h2><p>Choose which specialist checks run on each review.</p></div></div></div>
+              <div class="card-body">
+                <div class="setting"><div><strong>Enable terminology checks</strong><small>Compare preferred and restricted terminology.</small></div><input class="switch" type="checkbox" id="settingTerms" checked aria-label="Enable terminology checks" /></div>
+                <div class="setting"><div><strong>Enable readability checks</strong><small>Flag unusually long sentences.</small></div><input class="switch" type="checkbox" id="settingReadability" checked aria-label="Enable readability checks" /></div>
+                <div class="setting"><div><strong>Enable visual asset checks</strong><small>Check registered filename and sampled brand colours.</small></div><input class="switch" type="checkbox" id="settingVisual" checked aria-label="Enable visual asset checks" /></div>
+                <div class="setting"><div><strong>Evidence retrieval</strong><small>Ranked retrieval from approved knowledge items.</small></div><span class="badge ok">On</span></div>
+              </div>
+            </div>
+
+            <div class="card" id="set-data">
+              <div class="card-head"><div class="card-title"><span class="card-ico"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg></span><div><h2>Data and Privacy</h2><p>Built for organisational content governance. No paid checkout or marketing tracking is included in this prototype.</p></div></div></div>
+              <div class="card-body">
+                <div class="setting"><div><strong>Clear local demo data</strong><small>Removes saved review history, approvals, activity and custom knowledge entries from this browser.</small></div><button class="btn danger" id="clearLocalBtn"><svg class="i" aria-hidden="true"><use href="#i-trash"/></svg> Clear data</button></div>
+                <div class="setting"><div><strong>Reset demo to sample data</strong><small>Restores the original sample knowledge and settings.</small></div><button class="btn" id="resetDemoBtn"><svg class="i" aria-hidden="true"><use href="#i-reset"/></svg> Reset demo</button></div>
+                <div class="setting"><div><strong>Request cloud data deletion</strong><small>Signed-in users can request deletion of cloud account data. Shared workspace records are reviewed before removal.</small></div><button class="btn" id="requestDeletionBtn">Request deletion</button></div>
+                <details class="disclosure" style="margin-top:6px"><summary>Privacy, data and organisation details <svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="dis-body"><ul><li><b>Business/project details:</b> BrandGuard AI · CodeNova India 2026 · non-commercial hackathon prototype.</li><li><b>Data minimisation:</b> the app only asks for data needed for review, workspace and audit functions.</li><li><b>Children:</b> the product is not directed to children; do not submit children's personal data.</li><li><b>Marketing:</b> no marketing email system is included, so there are no promotional unsubscribe emails.</li><li><b>Payments:</b> there is no paid subscription, checkout or hidden fee in this prototype; therefore no refund processing is offered.</li><li><b>Deletion:</b> local demo data can be cleared immediately. Signed-in users can request cloud data deletion; shared workspace records are reviewed before removal.</li></ul><p style="margin-top:10px">See the <a href="privacy.html">Privacy notice</a>, <a href="terms.html">Terms</a> and <a href="cookies.html">Cookie notice</a>.</p></div></details>
+              </div>
+            </div>
+
+            <div class="card" id="set-ai">
+              <div class="card-head"><div class="card-title"><span class="card-ico"><svg class="i" aria-hidden="true"><use href="#i-cpu"/></svg></span><div><h2>AI Configuration</h2><p>Control whether drafts may be sent to a hosted AI provider.</p></div></div></div>
+              <div class="card-body">
+                <div class="setting"><div><strong>Allow hosted AI specialist review</strong><small>After you sign in to a team workspace, enabling this sends the draft and retrieved evidence to the server-configured AI provider. The key stays server-side.</small></div><input class="switch" type="checkbox" id="settingExternalAI" aria-label="Allow hosted AI specialist review" /></div>
+                <div class="setting"><div><strong>Hosted AI specialist agents</strong><small>Requires AI_API_KEY and AI_MODEL in server environment variables, plus your explicit consent.</small></div><span class="badge gray" id="hostedAIStatus">Not configured</span></div>
+                <div class="notice" style="margin-top:6px"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><div><b id="engineStatusTitle">Evidence-linked specialist rules are active.</b><br/><span id="engineStatusText">The review engine retrieves approved knowledge and runs six separate deterministic specialist checks. A hosted model is used only when an administrator configures a server-side AI key and you enable the option above.</span></div></div>
+              </div>
+            </div>
+
+            <div class="card" id="set-workspace">
+              <div class="card-head"><div class="card-title"><span class="card-ico"><svg class="i" aria-hidden="true"><use href="#i-building"/></svg></span><div><h2>Workspace Configuration</h2><p>The workspace these settings apply to.</p></div></div><button class="btn small" id="settingsGoTeam" type="button">Manage in Team Workspace</button></div>
+              <div class="card-body">
+                <div class="setting"><div><strong>Active workspace</strong><small id="setWsName">Local demo workspace</small></div><span class="badge warn" id="setWsMode">Local demo</span></div>
+                <div class="setting"><div><strong>Cloud team storage</strong><small>Shared, role-controlled records require a configured Supabase project.</small></div><span class="badge gray" id="cloudStatus">Not configured</span></div>
+              </div>
+            </div>
+
+            <div class="card" id="set-status">
+              <div class="card-head"><div class="card-title"><span class="card-ico"><svg class="i" aria-hidden="true"><use href="#i-activity"/></svg></span><div><h2>System Status</h2><p>Live status of the services this build can use.</p></div></div></div>
+              <div class="card-body">
+                <div class="status-list" id="systemStatus"></div>
+                <details class="disclosure" style="margin-top:14px"><summary>Implementation notes <svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="dis-body"><p>Evidence retrieval and specialist checks run locally by default. Cloud sync and hosted AI are optional and require server configuration.</p><p style="margin-top:8px">Before real organisational use, configure Supabase, run the supplied SQL schema, add server-only environment variables and complete an organisation-specific security review.</p></div></details>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TEAM ================= -->
+      <section class="page" id="page-team">
+        <div class="page-head">
+          <div><h1>Team Workspace</h1><p>Connect a shared workspace so knowledge, reviews and approval decisions can be accessed by the right people across your team.</p></div>
+          <div class="head-actions"><span class="badge gray" id="teamStatusBadge">Cloud not configured</span></div>
+        </div>
+        <div class="card mode-banner" id="modeBanner">
+          <div class="mode-ico" id="modeBannerIcon"><svg class="i lg" aria-hidden="true"><use href="#i-drive"/></svg></div>
+          <div><strong id="teamStatusTitle">Local demo workspace</strong><p id="teamStatusText">The app is running with browser-local demo data. Add the Supabase environment variables and database schema to activate real team accounts and shared cloud records.</p></div>
+        </div>
+        <div class="mode-compare">
+          <div class="mode-opt" id="modeOptLocal"><span class="card-ico" style="margin:0"><svg class="i" aria-hidden="true"><use href="#i-drive"/></svg></span><div><strong>Local demo mode</strong><p>Data stays in this browser. Nothing is shared. Sign-in creates a local demo account only.</p></div></div>
+          <div class="mode-opt" id="modeOptCloud"><span class="card-ico" style="margin:0"><svg class="i" aria-hidden="true"><use href="#i-cloud"/></svg></span><div><strong>Connected cloud mode</strong><p>Supabase Auth, server-side sessions and role-based access share knowledge, reviews and decisions across your team.</p></div></div>
+        </div>
+
+        <div class="team-grid">
+          <div class="card" id="teamAuthCard">
+            <div class="card-head"><div><h2>Sign in</h2><p>Create an account or sign in with your team credentials.</p></div><span class="badge blue">Secure session cookie</span></div>
+            <div class="card-body">
+              <div class="form-stack">
+                <div class="field"><label for="teamEmail">Email address</label><input id="teamEmail" type="email" autocomplete="username" placeholder="name@company.com" /></div>
+                <div class="field"><label for="teamPassword">Password</label><input id="teamPassword" type="password" autocomplete="current-password" minlength="10" placeholder="At least 10 characters" /></div>
+              </div>
+              <div class="btn-row" style="margin-top:14px"><button class="btn primary" id="teamSignInBtn">Sign in</button><button class="btn" id="showSignupBtn">Create account</button></div>
+              <div id="teamSignupFields" class="hidden" style="margin-top:16px;border-top:1px solid var(--border);padding-top:16px">
+                <div class="form-stack">
+                  <div class="field"><label for="teamName">Your name</label><input id="teamName" autocomplete="name" placeholder="Full name" /></div>
+                  <div class="field"><label for="teamWorkspaceName">First workspace name</label><input id="teamWorkspaceName" placeholder="e.g. Acme Brand Team" /></div>
+                </div>
+                <button class="btn primary" id="teamSignUpBtn" style="margin-top:14px">Create account</button>
+              </div>
+              <p class="helper" id="teamAuthMessage" aria-live="polite">Authentication is enabled only after Supabase configuration. You can continue exploring the local demo without signing in.</p>
+            </div>
+          </div>
+
+          <div class="card hidden" id="teamConnectedCard">
+            <div class="card-head"><div><h2>Workspace information</h2><p id="teamIdentity">Signed in</p></div><button class="btn small" id="teamSignOutBtn"><svg class="i" aria-hidden="true"><use href="#i-logout"/></svg> Sign out</button></div>
+            <div class="card-body">
+              <div class="field"><label for="teamWorkspaceSelect">Active workspace</label><select id="teamWorkspaceSelect"></select></div>
+              <div class="workspace-meta" id="workspaceMeta"></div>
+              <div class="btn-row" style="margin-top:14px"><button class="btn primary" id="teamRefreshBtn"><svg class="i" aria-hidden="true"><use href="#i-refresh"/></svg> Refresh cloud data</button><span id="teamSyncStatus" class="helper" style="margin:0">Not synced</span></div>
+            </div>
+          </div>
+
+          <div class="card hidden" id="teamCreateWorkspaceCard">
+            <div class="card-head"><div><h2>Create a workspace</h2><p>Your account does not belong to a workspace yet.</p></div></div>
+            <div class="card-body"><div class="field"><label for="newWorkspaceName">Workspace name</label><input id="newWorkspaceName" placeholder="e.g. BrandGuard Demo Team" /></div><button class="btn primary" id="createWorkspaceBtn" style="margin-top:14px">Create workspace</button></div>
+          </div>
+
+          <div class="card" id="teamStatusCard">
+            <div class="card-head"><div><h2>Connection status</h2><p>What is connected to this workspace.</p></div></div>
+            <div class="card-body"><div class="status-list" id="connectionStatus"></div></div>
+          </div>
+
+          <div class="card" id="teamMembersCard">
+            <div class="card-head"><div><h2>Team members</h2><p>Workspace roles are enforced by backend policies.</p></div><span class="badge gray" id="memberCount">0 members</span></div>
+            <div class="card-body"><div id="teamMemberList" class="member-list"><p class="muted">Connect a cloud workspace to view members.</p></div></div>
+          </div>
+
+          <div class="card" id="teamInvitesCard">
+            <div class="card-head"><div><h2>Invitations</h2><p>Invite colleagues and choose their role.</p></div></div>
+            <div class="card-body">
+              <div id="inviteLocked" class="notice plain"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg><span>Sign in to a workspace as an owner or admin to invite colleagues.</span></div>
+              <div id="inviteMemberPanel" class="hidden invite-panel">
+                <div class="field"><label for="inviteEmail">Invite by email</label><input id="inviteEmail" type="email" placeholder="colleague@company.com" /></div>
+                <div class="form-row" style="margin-top:12px;margin-bottom:0;align-items:end">
+                  <div class="field"><label for="inviteRole">Role</label><select id="inviteRole"><option value="author">Author · submit content</option><option value="reviewer">Reviewer · decide approvals</option></select></div>
+                  <button class="btn primary" id="inviteMemberBtn"><svg class="i" aria-hidden="true"><use href="#i-user-plus"/></svg> Send invitation</button>
+                </div>
+                <p class="helper">Invitations require Supabase email delivery and the server-only service-role key.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="teamRolesCard" style="grid-column:1/-1">
+            <div class="card-head"><div><h2>Roles and permissions</h2><p>Least-privilege roles for the review workflow.</p></div></div>
+            <div class="card-body" style="padding-top:14px">
+              <div class="table-wrap"><table class="perm-table" style="min-width:520px">
+                <thead><tr><th>Capability</th><th>Owner / Admin</th><th>Reviewer</th><th>Author</th></tr></thead>
+                <tbody>
+                  <tr><td>Submit content for review</td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td></tr>
+                  <tr><td>View shared review records</td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td></tr>
+                  <tr><td>Inspect findings and record decisions</td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><span class="no">—</span></td></tr>
+                  <tr><td>Edit approved knowledge</td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><span class="no">—</span></td><td class="perm"><span class="no">—</span></td></tr>
+                  <tr><td>Manage members and invitations</td><td class="perm"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></td><td class="perm"><span class="no">—</span></td><td class="perm"><span class="no">—</span></td></tr>
+                </tbody>
+              </table></div>
+              <details class="disclosure" style="margin-top:14px"><summary>How cloud mode enforces access <svg class="i" aria-hidden="true"><use href="#i-chev-down"/></svg></summary><div class="dis-body"><p>Cloud mode uses Supabase Auth, server-side session cookies, PostgreSQL Row Level Security and workspace membership checks. Local demo mode is not a substitute for multi-user authentication.</p><p style="margin-top:8px">Cloud mode needs a Supabase project. The repository includes the SQL schema and server-only environment variable template. Until those are configured, the application remains in local demo mode.</p></div></details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <footer class="legal-footer" aria-label="Legal and project information">
+      <span>BrandGuard AI · CodeNova India 2026 · Non-commercial hackathon prototype</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="cookies.html">Cookies</a> · <a href="about.html">Project details</a></span>
+    </footer>
+  </main>
+</div>
+
+<!-- ============ DIALOGS ============ -->
+<div class="modal-backdrop" id="knowledgeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <h2 id="modalTitle">Add knowledge entry</h2>
+    <p class="m-sub">Approved entries are used as evidence in future reviews.</p>
+    <div class="form-stack">
+      <div class="form-row" style="margin:0">
+        <div class="field"><label for="knowledgeCategory">Category</label><select id="knowledgeCategory"><option>Approved fact</option><option>Brand guideline</option><option>Preferred terminology</option><option>Restricted terminology</option><option>Approved claim</option><option>Approved visual asset</option><option>Accessibility rule</option></select></div>
+        <div class="field"><label for="knowledgeTitle">Title <span class="muted" style="font-weight:400">(optional)</span></label><input id="knowledgeTitle" placeholder="e.g. Product overview" /></div>
+      </div>
+      <div class="field"><label for="knowledgeText">Approved rule or information</label><textarea id="knowledgeText" style="min-height:96px" placeholder="Write the approved statement or rule…"></textarea></div>
+      <div class="field"><label for="knowledgeSource">Source / reference</label><input id="knowledgeSource" placeholder="e.g. Brand Guidelines v2.4, section 3" /></div>
+    </div>
+    <div class="modal-actions"><button class="btn" id="cancelKnowledgeBtn">Cancel</button><button class="btn primary" id="saveKnowledgeBtn">Save entry</button></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="confirmModal" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmMsg">
+  <div class="modal">
+    <div class="m-ico danger" id="confirmIcon"><svg class="i lg" aria-hidden="true"><use href="#i-alert"/></svg></div>
+    <h2 id="confirmTitle">Are you sure?</h2>
+    <p class="m-sub" id="confirmMsg" style="margin-bottom:0"></p>
+    <div class="modal-actions"><button class="btn" id="confirmCancel">Cancel</button><button class="btn danger solid" id="confirmOk">Confirm</button></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="decisionModal" role="dialog" aria-modal="true" aria-labelledby="decisionTitle">
+  <div class="modal wide">
+    <h2 id="decisionTitle">Review decision</h2>
+    <p class="m-sub" id="decisionSub">Review the findings, add a comment and record the outcome.</p>
+    <div class="dec-summary" id="decisionSummary"></div>
+    <div id="decisionForm" class="field">
+      <label for="decisionComment">Reviewer comment</label>
+      <textarea id="decisionComment" style="min-height:96px" placeholder="Explain the decision or required changes…"></textarea>
+      <div class="helper" id="decisionHint"></div>
+    </div>
+    <div id="decisionNote" class="notice plain hidden"></div>
+    <div class="modal-actions" id="decisionActions"></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="guideModal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+  <div class="modal">
+    <h2 id="guideTitle">Workflow guide</h2>
+    <p class="m-sub">How content moves through BrandGuard AI.</p>
+    <ol class="guide-steps">
+      <li><b>1</b><span><strong>Submit</strong> — paste your draft and optionally attach a visual asset.</span></li>
+      <li><b>2</b><span><strong>Evidence retrieval</strong> — approved knowledge is ranked against the content.</span></li>
+      <li><b>3</b><span><strong>Specialist checks</strong> — six separate checks produce findings with suggested fixes.</span></li>
+      <li><b>4</b><span><strong>Human review</strong> — send the item to the approval queue.</span></li>
+      <li><b>5</b><span><strong>Decision</strong> — a reviewer approves, requests changes or rejects, and the audit trail records it.</span></li>
+    </ol>
+    <div class="modal-actions"><button class="btn primary" id="guideClose">Got it</button></div>
+  </div>
+</div>
+
+<div class="toast-region" id="toast" role="status" aria-live="polite"></div>
+<div class="cookie-notice" id="cookieNotice" role="dialog" aria-label="Cookie notice"><p>BrandGuard uses only essential session cookies when team sign-in is enabled. The local demo uses browser storage for demo data. No advertising or analytics cookies are used. <a href="cookies.html">Learn more</a></p><button class="btn small" id="cookieDismiss">OK</button></div>
+
+<script src="assets/brandguard-engine.js"></script>
+<script src="assets/brandguard-app.js"></script>
+</body>
+</html>
